@@ -3,6 +3,8 @@ function compareTrue() {
   // seu código aqui
 }
 
+console.log('Iniciando o Projeto');
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
