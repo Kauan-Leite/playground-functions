@@ -21,13 +21,22 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+// Referencia do MDN .split()
+function splitSentence(fraseOrigin) {
   // seu código aqui
+  let separeacao = fraseOrigin.split(" ");
+
+  return separeacao;
+
 }
+
+
 
 // Desafio 4
 function concatName() {
   // seu código aqui
+  
+
 }
 
 // Desafio 5
