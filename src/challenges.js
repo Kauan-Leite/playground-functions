@@ -24,18 +24,24 @@ function calcArea(base, height) {
 // Referencia do MDN .split()
 function splitSentence(fraseOrigin) {
   // seu código aqui
-  let separeacao = fraseOrigin.split(" ");
+  let separacao = fraseOrigin.split(" ");
 
-  return separeacao;
+  return separacao;
 
 }
 
 
 
 // Desafio 4
-function concatName() {
+function concatName(fraseArray) {
   // seu código aqui
-  
+  let first = fraseArray[0];
+  let calcLast = fraseArray.length - 1;
+  let last = fraseArray[calcLast];
+
+  let msg = last + ', ' + first;
+
+  return msg;
 
 }
 
