@@ -131,12 +131,75 @@ let infos = [];
   
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let phraseFinal = '';
+
+  for(let index in phrase){
+
+    if(phrase[index] == 'a'){
+
+      phraseFinal += '1';
+    } else 
+    if(phrase[index] == 'e'){
+      phraseFinal += '2';
+    } else
+    if(phrase[index] == 'i'){
+      phraseFinal += '3';
+    } else
+    if(phrase[index] == 'o'){
+      phraseFinal += '4';
+    } else
+    if(phrase[index] == 'u'){
+      phraseFinal += '5';
+    }
+    
+    
+    else{
+      phraseFinal += phrase[index];
+    }
+
+
+  }
+
+  return phraseFinal;
 }
-function decode() {
+
+function decode(phrase) {
   // seu código aqui
+  let phraseFinal = '';
+
+  for(let index in phrase){
+
+    if(phrase[index] == '1'){
+
+      phraseFinal += 'a';
+    } else 
+    if(phrase[index] == '2'){
+      phraseFinal += 'e';
+    } else
+    if(phrase[index] == '3'){
+      phraseFinal += 'i';
+    } else
+    if(phrase[index] == '4'){
+      phraseFinal += 'o';
+    } else
+    if(phrase[index] == '5'){
+      phraseFinal += 'u';
+    }
+    
+    
+    else{
+      phraseFinal += phrase[index];
+    }
+
+
+  }
+
+  return phraseFinal;
+
 }
+
 
 // Desafio 10
 function techList() {
