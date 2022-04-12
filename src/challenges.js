@@ -79,10 +79,28 @@ function highestCount(numbersArray) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  
+  calcCat1 = cat1 - mouse ;
+  calcCat2 = cat2 - mouse ;
+  calcIgual1 = cat1 + mouse;
+  calcIgual2 = cat2 - mouse;
+
+  if(calcIgual1 == calcIgual2){
+    return 'os gatos trombam e o rato foge';
+  }
+
+  if(calcCat1 < calcCat2){
+    return 'cat1';
+  }
+  if(calcCat2 < calcCat1){
+    return 'cat2';
+  }
+
+
 }
+
+catAndMouse(10, 0, 20);
 
 // Desafio 8
 function fizzBuzz() {
