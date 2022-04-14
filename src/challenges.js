@@ -15,7 +15,7 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let resultadoFinal = base * height / 2;
+  let resultadoFinal = (base * height) / 2;
 
   return resultadoFinal;
 }
@@ -24,13 +24,10 @@ function calcArea(base, height) {
 // Referencia do MDN .split()
 function splitSentence(fraseOrigin) {
   // seu código aqui
-  let separacao = fraseOrigin.split(" ");
+  let separacao = fraseOrigin.split(' ');
 
   return separacao;
-
 }
-
-
 
 // Desafio 4
 function concatName(fraseArray) {
@@ -38,11 +35,11 @@ function concatName(fraseArray) {
   let first = fraseArray[0];
   let calcLast = fraseArray.length - 1;
   let last = fraseArray[calcLast];
+  let space = ', ';
 
-  let msg = last + ', ' + first;
+  let msg = last + space + first;
 
   return msg;
-
 }
 
 // Desafio 5
@@ -63,72 +60,58 @@ function highestCount(numbersArray) {
   let maior = -10;
   let vezes;
 
-  for(let index in numbersArray){
-
-    if(numbersArray[index] > maior){
-      maior = numbersArray [index];
-      vezes = 1
-    } else if (numbersArray[index] == maior) {
+  for (let index in numbersArray) {
+    if (numbersArray[index] > maior) {
+      maior = numbersArray[index];
+      vezes = 1;
+    } else if (numbersArray[index] === maior) {
       vezes += 1;
     }
-
   }
 
   return vezes;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  calcCat1 = cat1 - mouse ;
-  calcCat2 = cat2 - mouse ;
-  calcIgual1 = cat1 + mouse;
-  calcIgual2 = cat2 - mouse;
+  let calcCat1 = cat1 - mouse;
+  let calcCat2 = cat2 - mouse;
+  let calcIgual1 = cat1 + mouse;
+  let calcIgual2 = cat2 - mouse;
 
-  if(calcIgual1 == calcIgual2){
+  if (calcIgual1 === calcIgual2) {
     return 'os gatos trombam e o rato foge';
   }
 
-  if(calcCat1 < calcCat2){
+  if (calcCat1 < calcCat2) {
     return 'cat1';
   }
-  if(calcCat2 < calcCat1){
+  if (calcCat2 < calcCat1) {
     return 'cat2';
   }
-
-
 }
-
 
 // Desafio 8
 function fizzBuzz(arrayNum) {
   // seu código aqui
 let infos = [];
-
   for(let index = 0; index < arrayNum.length; index += 1){
-
       if(arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0){
         infos.push('fizzBuzz');
       }
       else if(arrayNum[index] % 3 === 0){
         infos.push('fizz');
       }
-      
       else if(arrayNum[index] % 5 === 0){
         infos.push('buzz');
       }
-
       else{
         infos.push('bug!');
       }
-
   }
-
   return infos;
-
 }
-  
 
 // Desafio 9
 function encode(phrase) {
@@ -197,32 +180,26 @@ function decode(phrase) {
   }
 
   return phraseFinal;
-
+  
 }
 
-
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, nome) {
   // seu código aqui
   let aprender = [];
 
-  if(tech.length > 0){
+  if (tech.length > 0) {
+    tech.sort();
 
-    tech.sort();  
-
-    for(let index = 0; index < tech.length; index += 1){
-  
-      aprender.push({tech: tech[index], name: name});
-  
+    for (let index = 0; index < tech.length; index += 1) {
+      aprender.push({ tech: tech[index], name: nome });
     }
-
   } else {
-    return('Vazio!')
+    return ('Vazio!');
   }
 
- return(aprender) ;
+  return (aprender);
 }
-
 
 module.exports = {
   calcArea,
