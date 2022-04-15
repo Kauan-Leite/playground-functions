@@ -77,8 +77,20 @@ function generatePhoneNumber(numbers) {
 
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let somaAB = lineA + lineB;
+  let somaBC = lineB + lineC;
+  let somaAC = lineA + lineC;
+  let triangle;
+
+  if(somaAB < lineC || somaBC < lineA || somaAC < lineB){
+    triangle = false;
+  } else {
+    triangle = true;
+  }
+
+  return triangle;
 }
 
 // Desafio 13
