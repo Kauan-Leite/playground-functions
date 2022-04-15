@@ -94,9 +94,36 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(marvada) {
   // seu código aqui
+  let coposAgua = 0;
+  let arr = marvada.split(" ");
+
+  let nums = arr.filter(function(elem){
+    return !isNaN(elem);
+  });
+
+  let final = nums.map(function(val){
+    return parseInt(val);
+  })
+
+  for(let index = 0; index < final.length; index += 1){
+    coposAgua += final[index]
+  };
+
+  let msg = '';
+
+  if(coposAgua == 1){
+    msg = coposAgua + " copo de água";
+  } else if (coposAgua > 1){
+    msg = coposAgua + " copos de água";
+  }
+  
+
+
+  return msg;
 }
+
 
 module.exports = {
   generatePhoneNumber,
