@@ -95,20 +95,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNum) {
   // seu código aqui
-let infos = [];
-  for(let index = 0; index < arrayNum.length; index += 1){
-      if(arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0){
-        infos.push('fizzBuzz');
-      }
-      else if(arrayNum[index] % 3 === 0){
-        infos.push('fizz');
-      }
-      else if(arrayNum[index] % 5 === 0){
-        infos.push('buzz');
-      }
-      else{
-        infos.push('bug!');
-      }
+  let infos = [];
+  for (let index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0) {
+      infos.push('fizzBuzz');
+    } else if (arrayNum[index] % 3 === 0) {
+      infos.push('fizz');
+    } else if (arrayNum[index] % 5 === 0) {
+      infos.push('buzz');
+    } else {
+      infos.push('bug!');
+    }
   }
   return infos;
 }
@@ -118,31 +115,24 @@ function encode(phrase) {
   // seu código aqui
   let phraseFinal = '';
 
-  for(let index in phrase){
-
-    if(phrase[index] == 'a'){
-
+  for (let index in phrase) {
+    if (phrase[index] == 'a') {
       phraseFinal += '1';
-    } else 
-    if(phrase[index] == 'e'){
+    } else
+    if (phrase[index] == 'e') {
       phraseFinal += '2';
     } else
-    if(phrase[index] == 'i'){
+    if (phrase[index] == 'i') {
       phraseFinal += '3';
     } else
-    if(phrase[index] == 'o'){
+    if (phrase[index] == 'o') {
       phraseFinal += '4';
     } else
-    if(phrase[index] == 'u'){
+    if (phrase[index] == 'u') {
       phraseFinal += '5';
-    }
-    
-    
-    else{
+    } else {
       phraseFinal += phrase[index];
     }
-
-
   }
 
   return phraseFinal;
@@ -152,35 +142,27 @@ function decode(phrase) {
   // seu código aqui
   let phraseFinal = '';
 
-  for(let index in phrase){
-
-    if(phrase[index] == '1'){
-
+  for (let index in phrase) {
+    if (phrase[index] == '1') {
       phraseFinal += 'a';
-    } else 
-    if(phrase[index] == '2'){
+    } else
+    if (phrase[index] == '2') {
       phraseFinal += 'e';
     } else
-    if(phrase[index] == '3'){
+    if (phrase[index] == '3') {
       phraseFinal += 'i';
     } else
-    if(phrase[index] == '4'){
+    if (phrase[index] == '4') {
       phraseFinal += 'o';
     } else
-    if(phrase[index] == '5'){
+    if (phrase[index] == '5') {
       phraseFinal += 'u';
-    }
-    
-    
-    else{
+    } else {
       phraseFinal += phrase[index];
     }
-
-
   }
 
   return phraseFinal;
-  
 }
 
 // Desafio 10
